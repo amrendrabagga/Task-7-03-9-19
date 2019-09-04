@@ -18,7 +18,7 @@ public class CRUDOperation {
 		System.out.println("1.create table 2.insert 3.update 4.delete 5.add column designation");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int choice = Integer.parseInt(reader.readLine());
-
+		reader.close();
 		switch (choice) {
 
 		case 1:
