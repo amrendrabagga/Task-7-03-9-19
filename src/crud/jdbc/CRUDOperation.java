@@ -23,8 +23,7 @@ public class CRUDOperation {
 
 		case 1:
 			String createQuery = "create table emp(eno int primary key,ename varchar(25),salary int)";
-			boolean checkCreate = s.execute(createQuery);
-
+			s.execute(createQuery);
 			System.out.println("EMP TABLE CREATED");
 			break;
 		case 2:
@@ -51,13 +50,13 @@ public class CRUDOperation {
 		case 5:
 			String alterQuery = "alter table emp add designation varchar(10)";
 			s.executeUpdate(alterQuery);
-
 			System.out.println("TABLE ALTERED SUCCESSFULLY");
 			break;
 
 		default:
 			System.out.println("CHOOSE CORRECT OPTION");
 		}
-	}
+		con.close();
 
+	}
 }
